@@ -12,7 +12,7 @@ namespace Mission2
         public void CalcDice(int dice)
         {
 
-            Dictionary<int, int> rollHistory = new Dictionary<int, int>();
+            Dictionary<int, int> rollHistory = new Dictionary<int, int>(); //store the history
             for (int i = 2; i <= 12; i++)
             {
                 rollHistory[i] = 0;
@@ -41,10 +41,10 @@ namespace Mission2
                 // Calculate percentage
                 double percentage = (double)count / dice * 100;
 
-                // Create asterisks representation (1% = 1 *)
+                // Replace numbers with astarisk
                 string stars = new string('*', (int)Math.Round(percentage));
 
-                // Display the sum, percentage, and stars
+                // Display the sum, percentage, and astarisks
                 Console.WriteLine($"{sum}: {stars}");
             }
 
